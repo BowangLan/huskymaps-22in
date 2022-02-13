@@ -32,9 +32,6 @@ public class SequentialSearchAutocomplete implements Autocomplete {
         List<CharSequence> results = new ArrayList<>();
         String prefixString = prefix.toString();
         for (CharSequence current : this.terms) {
-            //if (this.startWith(prefix, current)) {
-                //results.add(current); 
-            //}
             if (current.toString().startsWith(prefixString)) {
                 results.add(current); 
             }

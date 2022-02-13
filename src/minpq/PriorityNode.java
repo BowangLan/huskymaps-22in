@@ -2,6 +2,7 @@ package minpq;
 
 import java.util.Objects;
 
+
 /**
  * Represents the item-priority pair for use in {@link ExtrinsicMinPQ} implementations.
  *

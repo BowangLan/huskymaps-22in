@@ -28,14 +28,12 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (contains(item)) {
             throw new IllegalArgumentException("Already contains " + item);
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        this.pq.add(new PriorityNode<T>(item, priority));
     }
 
     @Override
     public boolean contains(T item) {
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.pq.contains(new PriorityNode<T>(item, 1.0));
     }
 
     @Override
@@ -43,8 +41,7 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (isEmpty()) {
             throw new NoSuchElementException("PQ is empty");
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.pq.peek().item();
     }
 
     @Override
@@ -52,8 +49,10 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (isEmpty()) {
             throw new NoSuchElementException("PQ is empty");
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        //PriorityNode<T> node = new PriorityNode<T>(this.pq.peek().item(), 1.0);
+        //this.pq.remove(node);
+        //return node.item();
+        return this.pq.poll().item();
     }
 
     @Override
@@ -61,13 +60,13 @@ public class HeapMinPQ<T> implements ExtrinsicMinPQ<T> {
         if (!contains(item)) {
             throw new NoSuchElementException("PQ does not contain " + item);
         }
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        PriorityNode<T> node = new PriorityNode<T>(item, 1.0);
+        this.pq.remove(node);
+        this.pq.add(new PriorityNode<T>(item, priority));
     }
 
     @Override
     public int size() {
-        // TODO: Replace with your code
-        throw new UnsupportedOperationException("Not implemented yet");
+        return this.pq.size();
     }
 }

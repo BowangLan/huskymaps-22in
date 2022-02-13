@@ -20,7 +20,7 @@ class ModeratorMultiTest {
     /**
      * Path to the toxic content.
      */
-    private static final String PATH = "data/toxic.tsv.gz";
+    private static final String PATH = "../data/toxic.tsv.gz";
 
     /**
      * Add all comments and toxicities to the given priority queue.
