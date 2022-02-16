@@ -38,8 +38,4 @@ public class SequentialSearchAutocomplete implements Autocomplete {
         }
         return results;
     }
-
-    //private boolean startWith(CharSequence prefix, CharSequence word) {
-        
-    //}
 }

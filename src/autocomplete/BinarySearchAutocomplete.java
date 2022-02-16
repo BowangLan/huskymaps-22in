@@ -26,11 +26,6 @@ public class BinarySearchAutocomplete implements Autocomplete {
     @Override
     public void addAll(Collection<? extends CharSequence> terms) {
         this.terms.addAll(terms);
-        //for (CharSequence term : terms) {
-            //if (this.terms.contains(term)) continue;
-            //this.terms.add(term);
-            ////System.out.println("Term added: " + term);
-        //}
         Collections.sort(this.terms, CharSequence::compare);
         System.out.println(String.format("%d terms added", terms.size()));
     }
